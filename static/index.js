@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let minutes = date.getMinutes().toString().padStart(2, '0');
                 let formattedDate = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${hours}:${minutes}:${date.getSeconds()}`;
                
-                assistantMessageDiv.innerHTML =" <i class='fa-solid fa-comment'></i><p id='res-mes'>"+escapedAssistantMessage+"<br>"+formattedDate+"</p><i class='far fa-copy' onclick='copyText(\""+escapedAssistantMessage+"\")'></i>";
+                assistantMessageDiv.innerHTML =" <i class='fa-solid fa-comment'></i><p id='res-mes'>"+escapedAssistantMessage+"<br>"+formattedDate+"</p><i class='far fa-copy' onclick='copyText(\""+assistantMessage+"\")'></i>";
                 chatHistory.appendChild(assistantMessageDiv);
                 // 滾動到最新的回答
                 assistantMessageDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
