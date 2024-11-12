@@ -76,7 +76,7 @@ h1 {
 }
 
 .wrap {
-    max-width: 1296px;
+    max-width: 90vw; /* 將寬度增加到90vw */
     margin: 0 auto;
 }
 
@@ -90,6 +90,8 @@ img {
     justify-content: space-between;
     margin-left: 20px;
     align-items: center;
+    max-width: 90vw; /* 將寬度增加到90vw */
+	
 }
 
 .message {
