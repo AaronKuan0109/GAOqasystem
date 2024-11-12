@@ -112,13 +112,13 @@ def get_response():
     combined_input = history_text + "\n\n" + "相關資料:\n" + "\n".join([doc.page_content for doc in docs]) + "\n\n" + f"User: {user_input}"
 
     # 初始化语言模型（LLM），配置生成回答的参数
-    llm = ChatOpenAI(model_name="gpt-4o", temperature=0.2, max_tokens=2000)
+    llm = ChatOpenAI(model_name="gpt-4o", temperature=0.1, max_tokens=2500)
 
     # 提示词，引导模型生成详细的回答
     prompt = (
-        "你是一位負責回答全球事務處（Global Affairs Office）相關問題的人員。會有不同國籍的人員用不同語言向你詢問問題，請仔細從提供的資料中提取有用的信息，"
-        "在回答用戶的問題前，請先提供與問題相關的網址連接，並提供盡可能多的相關細節、列出具體步驟和聯系人信息來回答用戶問題。"
-        "請提供相關的數據或資料有提供的網址連接。"
+        "你是一位負責回答全球事務處（Global Affairs Office）相關問題的人員。會有不同國籍的人員用不同語言向你詢問問題，請仔細從提供的資料中提取有用的信息回答問題，"
+        "回答用戶的問題時，請務必提供相關的網址連接，並盡可能提供相關細節與資訊、列出具體的流程步驟和聯系人相關信息來回答用戶問題。"
+        "請務必提供相關的數據或資料有提供的網址連接。"
     )
 
     # 加载问答链（QA chain），用于处理问答任务
