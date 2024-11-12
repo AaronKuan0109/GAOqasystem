@@ -132,6 +132,11 @@ img {
     border-radius: 3px;
     padding: 20px;
     line-height: 1.5;
+    word-wrap: break-word;  /* 允許在單詞中間進行換行 */
+    white-space: pre-wrap;  /* 保留文字中的換行，並且在必要時換行 */
+    overflow-wrap: break-word;  /* 當單詞超過容器寬度時換行 */
+    max-width: 100%;  /* 設定最大寬度為容器寬度 */
+
 }
 
 .chat-history {
