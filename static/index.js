@@ -170,8 +170,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // 在右上角標題中顯示文字
         const rightTitle = document.getElementById("right-title");
         if (rightTitle) {
-         rightTitle.innerHTML = 'Academic Affairs<br>QA System'; // 在右上角顯示文字
+         rightTitle.innerHTML = 'Global Affairs <br>QA System'; // 在右上角顯示文字
         }
+
         submitForm();
     });
 });
